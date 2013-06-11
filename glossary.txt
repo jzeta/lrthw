@@ -1,0 +1,44 @@
+Variable
+Name for a value
+
+"="
+Assignment operator. Assigns values to a variable.
+
+"+" 
+Addition operator
+
+"-" 
+Subtraction operator
+
+"*" 
+Multiplication operator
+
+"/"" 
+Division operator
+
+"**"
+Exponentiation operator. Raises the first number (base) to the power of the second (exponent)
+
+"%"
+Modulus division (modulo) operator. Returns the remainder left over by dividing the first number by the second.
+
+String
+Used for storing and manipulating text in Ruby. Strings are written between quotation marks ("" or ''). Quotes at each end of the string must match.
+
+Escape Sequence
+When you need to use single or double quote inside of a single or double-quoted string, you can escape the internal quotation marks using a backslash character (\).
+
+String Interpolation 
+Placing variable values directly into the body of a double-quoted string, using #{variable}.
+
+put/print
+Displays the results of evaluating Ruby code.
+
+puts
+"put string." Displays the results of evaluating Ruby code. Adds a newline after executing.
+
+Boolean
+A value representing true or false. In Ruby, all values are true except false and nil
+
+Function
+Also called a method. Callable script. Can take parameters/arguments. Can return a value.
