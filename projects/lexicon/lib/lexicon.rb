@@ -5,7 +5,7 @@ class Lexicon
     @guide = {  :direction => ["north", "south", "east", "west", "down", "up", "left", "right", "back"],
                 :verb => ["go", "stop", "kill", "eat"],
                 :stop => ["the", "in", "of", "from", "at", "it"],
-                :noun => ["door", "bear", "princess", "cabinet"],
+                :noun => ["door", "bear", "princess", "cabinet"]
               }  
   end
 
@@ -13,7 +13,7 @@ class Lexicon
     words = input_string.split()
     word_list = []
     words.each do |input_word|
-      new_token, new_word = '', ''
+      new_token, new_word = :error, input_word
       @guide.each do |token, token_values|
         if token_values.include? input_word
           new_token, new_word = token, input_word
@@ -21,7 +21,6 @@ class Lexicon
           new_token, new_word = :number, convert_number(input_word)
         end
       end
-      new_token, new_word = :error, input_word unless new_token != ''
       word_list << Pair.new(new_token, new_word)
     end
     word_list
