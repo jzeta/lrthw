@@ -24,6 +24,11 @@ class Game
 		end
 	end
 
+  def death()
+    puts @quips[rand(@quips.length())]
+    Process.exit(1)
+  end
+
 	def central_corridor()
 		puts "The Gothons of Planet Percal #25 have invaded your ship and destroyed"
 		puts "your entire crew. You are the last surviving member and your last"
