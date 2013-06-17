@@ -117,11 +117,6 @@ class Game
       into jam jelly.
       })
 
-    @escape_pod.add_paths({
-        '2' => the_end_winner,
-        '*' => the_end_loser
-      })
-
     @generic_death = Room.new("death", "You died.")
 
     @shoot_death = Room.new("Shoot Death", 
@@ -160,6 +155,11 @@ class Game
       melting sound as the mechanism is fused together.
       You decide to sit there, and finally the Gothons blow up the
       ship from their ship and you die.
+      })
+
+    @escape_pod.add_paths({
+        '2' => the_end_winner,
+        '*' => the_end_loser
       })
 
     @the_bridge.add_paths({

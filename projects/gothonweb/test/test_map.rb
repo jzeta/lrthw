@@ -36,6 +36,7 @@ class MyUnitTests < Test::Unit::TestCase
 
   def test_gothon_game_map()
     game = Game.new()
+
     assert_equal(game.start.go('shoot!'), game.shoot_death)
     assert_equal(game.start.go('dodge!'), game.dodge_death)
 
@@ -43,5 +44,25 @@ class MyUnitTests < Test::Unit::TestCase
     assert_equal(room, game.laser_weapon_armory)
   end
 
+  def test_laser_weapon_armory()
+    game = Game.new()
+
+    assert_equal(game.laser_weapon_armory.go('0132'), game.the_bridge)
+    assert_equal(game.laser_weapon_armory.go('5555'), game.wrong_code_death)
+  end
+
+  def test_the_bridge()
+    game = Game.new()
+
+    assert_equal(game.the_bridge.go('throw the bomb'), game.throw_the_bomb_death)
+    assert_equal(game.the_bridge.go('slowly place the bomb'), game.escape_pod)
+  end
+
+  def test_escape_pod()
+    game = Game.new()
+
+    assert_equal(game.escape_pod.go('2'), game.the_end_winner)
+    assert_equal(game.escape_pod.go('9'), game.the_end_loser)
+  end
 end
   
